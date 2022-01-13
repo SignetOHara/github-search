@@ -5,15 +5,15 @@ const githubId = process.env.REACT_APP_GITHUB_ID;
 const githubSecret = process.env.REACT_APP_GITHUB_SECRET;
 
 export const Search = ({ doFetch }) => {
-  const [text, setText] = useState('');
+  const [userName, setUserName] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (text.trim() === '') {
+    if (userName.trim() === '') {
       return;
     } else {
       doFetch(
-        `https://api.github.com/users/${text}/repos?sort=created:asc&client_id=${githubId}&client_secret=${githubSecret}`
+        `https://api.github.com/users/${userName}/repos?sort=created:asc&client_id=${githubId}&client_secret=${githubSecret}`
       );
     }
   };
@@ -27,7 +27,7 @@ export const Search = ({ doFetch }) => {
             id="userSearch"
             type="text"
             placeholder="Search Github User..."
-            onChange={(e) => setText(e.target.value)}
+            onChange={(e) => setUserName(e.target.value)}
           />
         </label>
         <button type="submit" className={styles.btn}>

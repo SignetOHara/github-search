@@ -24,7 +24,6 @@ export const useApi = () => {
         if (!response.ok) {
           throw new Error(`HTTP Error!: Status ${response.status}`);
         }
-
         const responseData = await response.json();
 
         if (!didCancel) {

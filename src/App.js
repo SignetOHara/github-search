@@ -1,7 +1,8 @@
 import { useApi } from './hooks/useApi';
 import { Navbar } from './components/Navbar/Navbar';
-import { Search } from './components/Search/Search';
-import { Repos } from './components/repos/Repos';
+import { Main } from './containers/Main';
+import { Project } from './components/Project/Project';
+import { Routes, Route } from 'react-router-dom';
 import './reset.css';
 
 function App() {
@@ -10,8 +11,20 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Search doFetch={doFetch} />
-      <Repos repos={data} isLoading={isLoading} isError={isError} />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Main
+              data={data}
+              isLoading={isLoading}
+              isError={isError}
+              doFetch={doFetch}
+            />
+          }
+        />
+        <Route path="/:user/:repo" element={<Project />} />
+      </Routes>
     </div>
   );
 }
