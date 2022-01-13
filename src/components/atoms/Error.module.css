@@ -10,4 +10,6 @@
   box-shadow: var(--shadow);
   width: 70%;
   max-width: 53rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }

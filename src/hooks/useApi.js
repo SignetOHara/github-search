@@ -1,5 +1,6 @@
 import { useState, useEffect, useReducer } from 'react';
 import { dataFetchReducer } from '../reducers/dataFetchReducer';
+import axios from 'axios';
 
 export const useApi = () => {
   const [url, setUrl] = useState(``);
@@ -19,21 +20,19 @@ export const useApi = () => {
       if (url === '') return;
       dispatch({ type: 'FETCH_INIT' });
       try {
-        const response = await fetch(url);
-
-        if (!response.ok) {
+        const response = await axios.get(url);
+        if (!response.status) {
           throw new Error(`HTTP Error!: Status ${response.status}`);
         }
-        const responseData = await response.json();
 
         if (!didCancel) {
-          if (responseData.length === 0) {
+          if (response.data.length === 0) {
             dispatch({
               type: 'FETCH_FAILURE',
               error: 'User has no projects!',
             });
           } else {
-            dispatch({ type: 'FETCH_SUCCESS', payload: responseData });
+            dispatch({ type: 'FETCH_SUCCESS', payload: response.data });
           }
         }
       } catch (error) {
