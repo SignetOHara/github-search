@@ -1,0 +1,19 @@
+.repos_section {
+  padding-bottom: 2rem;
+}
+
+.repos_list {
+  list-style: none;
+  width: 80%;
+  max-width: 53rem;
+  margin: auto;
+}
+
+@media screen and (min-width: 90rem) {
+  .repos_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    max-width: 70%;
+  }
+}

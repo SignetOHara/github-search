@@ -33,3 +33,12 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+
+ul {
+  padding: 0;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+}

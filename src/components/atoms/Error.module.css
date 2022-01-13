@@ -1,17 +1,13 @@
 @import '../../globals.css';
 
-.repo {
+.error {
   border: 1px solid var(--accent-color);
   border-radius: 8px;
   padding: 2rem;
-  margin: 2rem 0;
+  margin: 2rem auto;
   text-align: center;
   color: var(--accent-color);
-  cursor: pointer;
-}
-
-.repo:hover {
-  background-color: var(--primary-color);
-  color: var(--black);
-  transition: var(--transition);
+  box-shadow: var(--shadow);
+  width: 70%;
+  max-width: 53rem;
 }
