@@ -1,0 +1,25 @@
+@import '../../globals.css';
+
+.header {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  box-shadow: var(--shadow);
+}
+
+.navbar {
+  width: 100%;
+  padding: 0.7rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1 {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 2rem;
+}

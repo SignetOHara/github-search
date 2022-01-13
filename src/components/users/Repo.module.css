@@ -1,0 +1,17 @@
+@import '../../globals.css';
+
+.repo {
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+.repo:hover {
+  background-color: var(--primary-color);
+  color: var(--black);
+  transition: var(--transition);
+}

@@ -1,0 +1,49 @@
+@import '../../globals.css';
+
+.search_form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem auto;
+  height: 10rem;
+}
+
+.btn,
+.search_input {
+  background-color: var(--white);
+  border: 1px solid var(--accent-color);
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  box-shadow: var(--shadow);
+}
+
+.search_label {
+  width: 100%;
+}
+
+.search_input {
+  width: 100%;
+}
+
+.search_input:focus {
+  outline: 2px solid var(--accent-color);
+}
+
+.btn {
+  border-radius: 15px;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+  color: var(--white);
+  transition: var(--transition);
+}
+
+.btn:focus-visible {
+  outline: none;
+}
