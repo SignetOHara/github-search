@@ -4,15 +4,15 @@ import styles from './Search.module.css';
 const githubId = process.env.REACT_APP_GITHUB_ID;
 const githubSecret = process.env.REACT_APP_GITHUB_SECRET;
 
-export const Search = ({ setUrl, setIsError }) => {
+export const Search = ({ doFetch }) => {
   const [text, setText] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (text.trim() === '') {
-      setIsError({ status: true, msg: 'Please enter a User!' });
+      return;
     } else {
-      setUrl(
+      doFetch(
         `https://api.github.com/users/${text}/repos?sort=created:asc&client_id=${githubId}&client_secret=${githubSecret}`
       );
     }
