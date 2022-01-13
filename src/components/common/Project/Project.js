@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { Error } from '../../atoms/Error';
 import { Spinner } from '../../atoms/Spinner';
 import styles from './Project.module.css';
+import { Button } from '../../atoms/Button';
 
 export const Project = () => {
   const [{ data, isLoading, isError }, doFetch] = useApi();
@@ -27,9 +28,7 @@ export const Project = () => {
     <main className={styles.container}>
       <h2>{user}'s</h2>
       <h3>{repo}'s md file</h3>
-      <button className={styles.btn} onClick={() => navigate(-1)}>
-        Go Back
-      </button>
+      <Button type="button" text="Go Back" click={() => navigate(-1)} />
       {isError.status && <Error msg={"MD file can't be found!"} />}
       {isLoading ? (
         <Spinner />

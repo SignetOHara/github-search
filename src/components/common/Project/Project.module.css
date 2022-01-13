@@ -22,28 +22,3 @@
 .markdownContainer h1 {
   margin: 1rem 0;
 }
-
-.btn {
-  background-color: var(--white);
-  border: 1px solid var(--accent-color);
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  color: var(--accent-color);
-  box-shadow: var(--shadow);
-}
-
-.btn {
-  border-radius: 15px;
-  border-width: 2px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: var(--accent-color);
-  color: var(--white);
-  transition: var(--transition);
-}
-
-.btn:focus-visible {
-  outline: none;
-}

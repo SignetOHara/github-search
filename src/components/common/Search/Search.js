@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Button } from '../../atoms/Button';
 import styles from './Search.module.css';
 
 const githubId = process.env.REACT_APP_GITHUB_ID;
@@ -30,9 +31,7 @@ export const Search = ({ doFetch }) => {
             onChange={(e) => setUserName(e.target.value)}
           />
         </label>
-        <button type="submit" className={styles.btn}>
-          Search Users
-        </button>
+        <Button type="submit" text="Search Users" click="" />
       </form>
     </section>
   );
