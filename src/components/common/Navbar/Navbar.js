@@ -7,7 +7,7 @@ export const Navbar = () => {
       <nav className={styles.navbar}>
         <h1 className={styles.h1}>
           <FaGithub className={styles.icon} />
-          Github Profile Search
+          Github User Search
         </h1>
       </nav>
     </header>
