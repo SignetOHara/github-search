@@ -1,4 +1,4 @@
-@import '../../globals.css';
+@import '../../../globals.css';
 .repo {
   border: 1px solid var(--accent-color);
   border-radius: 8px;
@@ -14,4 +14,10 @@
   background-color: var(--primary-color);
   color: var(--black);
   transition: var(--transition);
+}
+
+.language {
+  color: var(--black);
+  margin-top: 0.5rem;
+  font-size: 1rem;
 }
