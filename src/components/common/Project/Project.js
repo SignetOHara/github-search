@@ -1,9 +1,9 @@
 import ReactMarkdown from 'react-markdown';
-import { useApi } from '../../hooks/useApi';
+import { useApi } from '../../../hooks/useApi';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { Error } from '../atoms/Error';
-import { Spinner } from '../atoms/Spinner';
+import { Error } from '../../atoms/Error';
+import { Spinner } from '../../atoms/Spinner';
 import styles from './Project.module.css';
 
 export const Project = () => {

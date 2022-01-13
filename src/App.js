@@ -1,7 +1,7 @@
 import { useApi } from './hooks/useApi';
-import { Navbar } from './components/Navbar/Navbar';
+import { Navbar } from './components/common/Navbar/Navbar';
 import { Main } from './containers/Main';
-import { Project } from './components/Project/Project';
+import { Project } from './components/common/Project/Project';
 import { Routes, Route } from 'react-router-dom';
 import './reset.css';
 
