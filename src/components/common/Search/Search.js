@@ -31,7 +31,7 @@ export const Search = ({ doFetch }) => {
             onChange={(e) => setUserName(e.target.value)}
           />
         </label>
-        <Button type="submit" text="Search Users" click="" />
+        <Button type="submit" text="Search Users" />
       </form>
     </section>
   );
